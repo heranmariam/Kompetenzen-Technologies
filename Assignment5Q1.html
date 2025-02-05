@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <h2 style="color: blue; text-align:center" ><u> Student Registration Form using Table in HTML</u></h2>
+    <div style="background-color:red;color:white; border-style: dashed;  border-color: black;width:600px";>
+        <form>
+
+            <table>
+            
+                <tr>
+                    <td><label for="1st_Name">First Name</label> </td>
+                    <td>
+                        <input 
+                        type="text" 
+                        id="1st_Name"
+                        placeholder="Ghanendra"
+                        name="1st_Name"
+                        required
+                        maxlength="10"><br>
+                        <br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <label  for="L_Name">Last Name</label></td>
+                        <td>
+                            <input 
+                            type="text"
+                            id="1st_Name"
+                            placeholder="Yadav"
+                            name="L_Name"
+                            required
+                            maxlength="10"><br>
+                            <br>
+                        </td>
+                    
+                </tr>
+                
+                <tr>
+                    <td><label for="email">Email ID</label></td>
+                    <td>
+                        <input 
+                        type="email" 
+                        name="email" 
+                        id="em"
+                        placeholder="yghanendra@gmail.com"
+                        required><br>
+                        <br>
+                    </td>
+
+                    
+                </tr>
+
+
+                <tr>
+                    <td><label for="ph_no">Mobile Number</label></td>
+                        <td>
+                            <input 
+                            type="text"
+                            name="ph_no"
+                            id="ph_no"
+                            placeholder="7842xxxxxx"
+                            required><br>
+                            <br>
+                        </td>
+
+                    
+                </tr>
+
+                <tr>
+                    <td><label for="Gen">Gender</label></td>
+                    <td>
+                        <input type="radio"name="Gen"/>male
+                        <input type="radio"name="Gen"/>female <br>
+                        <br>
+                    </td>
+
+                    
+                </tr>
+
+                <tr>
+                    <td><label for="DOB">Date of Birth(DOB)</label></td>
+                    <td>
+                        <input type="date"
+                        id="DOB"
+                        name="DOB"
+                        required> 
+                        <br>
+                        <br>
+
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="addr">Address</label></td>
+
+                    <td><textarea name="addr" id="addr" rows="3" column="5"> </textarea></td> 
+                </tr>
+
+                <tr>
+                    <td><label for="city">City</label></td>
+                    <td><input 
+                        type="text"
+                        name="city"
+                        required
+                        placeholder="Bangalore"
+                        id="city"> <br><br>
+                    </td>
+                </tr>
+
+                <tr>
+
+                <td><label for="pincode">pincode</label></td>
+                <td><input 
+                    type="number" 
+                    name="pincode" 
+                    id="pincode"
+                    placeholder="560068"> <br><br>
+                </td>
+
+            </tr>
+
+            <tr>
+                <td><label for="state">State</label></td>
+                <td><input 
+                    type="text" 
+                    name="state" 
+                    id="state"
+                    placeholder="Karnataka"> <br><br>
+                </td>
+            </tr>            
+            
+            
+            <tr>
+                <td><label for="country">Country</label></td>
+                <td><input 
+                    type="text" 
+                    name="country" 
+                    id="country"
+                    placeholder="India"> <br><br>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td><label for="hobby">Hobbies</label></td>
+                <td>
+                    <input type="checkbox"name="hobby">Drawing 
+                    <input type="checkbox"name="hobby">singing 
+                    <input type="checkbox"name="hobby">Dancing 
+                    <input type="checkbox"name="hobby">Sketching <br>
+                    <input type="checkbox"name="hobby">Others 
+                    <input type="text"name="hobby" placeholder="Ex-Teaching"><br><br>
+
+                </td>
+
+                <tr>
+                    <td><label for="qua">Qualification</label></td>
+                    <td>
+                                
+                                <input type="checkbox" name="qua" id="qua"/>High School(10th) <br>
+                                <input type="checkbox" name="qua" id="qua"/>Higher School(12th) <br>
+                                <input type="checkbox" name="qua" id="qua"/>Graduation(Bachelors) <br>
+                                <input type="checkbox" name="qua" id="qua"/>Post Graduation(Masters) <br>
+                                <input type="checkbox" name="qua" id="qua"/>Phd <br><br>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td><label for="qua">Qualification</label></td>
+                    <td>
+                        <input type="radio" name="qua" id="qua"/>BCA(Bachelor of Computer Application) <br>
+                        <input type="radio" name="qua" id="qua"/>B.com(Bachelor of Commerce) <br>
+                        <input type="radio" name="qua" id="qua"/>Bachelor of Science <br>
+                        <input type="radio" name="qua" id="qua"/> BA (Bachelor of Arts) <br>
+                        <input type="radio" name="qua" id="qua"/>MCA (Master of Computer Applications) <br>
+                        <input type="radio" name="qua" id="qua"/>M.Com (Master of Commerce) <br>
+                        <input type="radio" name="qua" id="qua"/> M.Sc (Master of Science)<br>
+                        <input type="radio" name="qua" id="qua"/>MA (Master of Arts) <br><br>
+
+                </tr>
+                <tr>
+                    <td colspan="2" style="text-align: center;">
+                            <input type="submit" id="s">
+                            <input type="reset" id="r">
+
+                    </td>
+
+                </tr>
+
+
+               
+
+                
+            </tr>
+
+            </table>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

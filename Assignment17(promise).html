@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <script>
+                                //    const promise= new Promise((resolve,reject)=>{
+                                //     resolve("working successfully");
+                                //    });
+                                //    promise.then((resolve)=>{
+                                //     console.log(resolve);
+                                //    });
+   ************************************************************************************
+         const promise= new Promise((resolve,reject)=>{
+                   reject("error")                
+            // resolve("working successfully");
+                                   });
+                                   promise.then((resolve)=>{
+                                    console.log(resolve);
+                                   });
+  ************************************************************************************
+                            const promise = new Promise((resolve, reject) => {
+                        
+                        
+                            // resolve("value is success"); 
+                        
+                            reject("error");
+                        
+                    });
+
+                    promise.then((resolve) => {
+                        console.log(resolve);
+                        
+                    }).catch((error) => {
+                        console.log(error);
+                    });
+
+****************************************************************************************
+                function getData(num1){
+                    return new Promise((resolve,reject)=>{
+                        if(num1%2===0){
+                            resolve(num1);
+                        }
+                        else {
+                        reject("number is odd");
+                    }
+                    });
+                }
+                getData(5).then((resolve)=>{
+                    console.log(resolve)}).catch((error) => {
+                        console.log(error);
+                    
+                })
+ *****************************************************************************************
+             
+                function calculateSquare(number){
+                    return new Promise((success, failure) => {
+                        if (number == 0) {
+                            failure("Error: Input is zero");
+                        }
+                        success(number * number);
+                    });
+                }
+            
+                function calculateSum(value1, value2){
+                    return new Promise((success, failure) => {
+                        if (value1 == 0) {
+                            failure("Error: First input is zero");
+                        }
+                        success(value1 + value2);
+                    });
+                }
+            
+                function calculateProduct(value1, value2){
+                    return new Promise((success, failure) => {
+                        if (value1 == 0 || value2 == 0) {
+                            failure("Error: One of the inputs is zero");
+                        }
+                        success(value1 * value2);
+                    });
+                }
+            
+                calculateSquare(3)
+                .then((square) => {
+                    console.log("Square:", square);
+                    return calculateSum(square, 7);
+                })
+                .then((sum) => {
+                    console.log("Sum:", sum);
+                    return calculateProduct(sum, 5);
+                })
+                .then((product) => {
+                    console.log("Product:", product);
+                    return calculateProduct(product, 2);
+                })
+                .then((finalResult) => {
+                    console.log("Final Result:", finalResult);
+                })
+                .catch((error) => {
+                    console.log(error);
+                });
+***********************************************************************************************
+                async function double(num) {
+                    return num * 2;
+                }
+            
+                async function add(x, y) {
+                    return x + y;
+                }
+            
+                async function multiplyBy(z, w) {
+                    return z * w;
+                }
+            
+                async function execute() {
+                    try {
+                        const doubled = await double(4);
+                        console.log("Doubled:", doubled);
+            
+                        const added = await add(doubled, 6);
+                        console.log("Added:", added);
+            
+                        const multiplied = await multiplyBy(added, 3);
+                        console.log("Multiplied:", multiplied);
+                    } catch (error) {
+                        console.log("Error:", error.message);
+                    }
+                }
+            
+                execute();
+            </script> -->
+</body>
+</html>

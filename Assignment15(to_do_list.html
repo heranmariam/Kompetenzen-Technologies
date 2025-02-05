@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-List</title>
+    <link rel="stylesheet" href="to-do.css">
+</head>
+<body>
+    <div class="container">
+        <div class="todo-list"> 
+            <h2>To-Do-List</h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your list">
+                <button onclick="addTask()">Add</button>
+                <button onclick="displayTasks()">Display All Tasks</button>
+            </div>
+            <ul id="list-container"></ul>
+        </div>
+    </div>
+    <script>
+        const inputbox = document.getElementById("input-box");
+        const listcontainer = document.getElementById("list-container");
+
+        function addTask() {
+            if (inputbox.value === '') {
+                alert("You must write something");
+            } else {
+                let li = document.createElement("li");
+                li.innerHTML = inputbox.value;
+                listcontainer.appendChild(li);
+                let span = document.createElement("span");
+                span.innerHTML = "\u00d7"; // This is the multiplication sign (×) symbol
+                li.appendChild(span);
+            }
+            inputbox.value = "";
+        }
+            /*function addTask(): Defines the addTask function to add a new task.
+
+
+        ====>>> if (inputbox.value === '') { alert("You must write something"); }: ====>>>   Checks if the input box is empty. If true, an alert message is shown.
+        ====>>> else { ... }:                                                      ====>>> Executes the code inside the else block if the input box is not empty.
+        ====>>> let li = document.createElement("li");:                            ====>>> Creates a new <li> (list item) element.
+        ====>>> li.innerHTML = inputbox.value;:                                    ====>>> Sets the content of the <li> to the value entered in the input box.
+        ====>>> listcontainer.appendChild(li);:                                    ====>>> Adds the new <li> element to the listcontainer.
+        ====>>> let span = document.createElement("span");:                        ====>>> Creates a new <span> element.
+        ====>>> span.innerHTML = "\u00d7";:                                        ====>>> Sets the content of the <span> to the multiplication sign (×).
+        ====>>> li.appendChild(span);:                                             ====>>> Adds the <span> to the newly created <li>.
+        ====>>> inputbox.value = "";:                                              ====>>> Clears the input box after the task is added. */
+
+
+
+        function displayTasks() {
+            const tasks = Array.from(listcontainer.getElementsByTagName("li")).map(li => li.textContent.replace("\u00d7", "").trim()); //############################################  listcontainer.getElementsByTagName("li"): ===========>>>>> This part finds all the <li> (list item) elements inside the listcontainer (the <ul> element that contains all tasks). ####################################################
+//####################===> Array.from(...) ===>: Converts the list of <li> elements into an array. This makes it easier to work with in JavaScript.
+
+//############################## ====>>> : listcontainer.getElementsByTagName("li"): ===========>>>>> This part finds all the <li> (list item) elements inside the listcontainer (the <ul> element that contains all tasks). #########################################################//
+                                     
+//############################## ====>>>  .map(li => li.textContent.replace("\u00d7", "").trim()):=======>>>> This part goes through each <li> element and does the following: ###################################################
+
+                         //      ====>>>  li.textContent: ====> Gets the text content inside the <li> element (e.g., the task text like "Buy groceries").
+                        //       ====>>>  .replace("\u00d7", ""): Removes the "×" (close) symbol from the text. The \u00d7 is the Unicode for the "×" symbol.
+                       //        ====>>>  .trim(): Removes any extra spaces from the beginning or end of the text.
+
+//############################## ====>>> Result: ===>>>The tasks variable will hold an array of task texts, with the "×" symbol removed and extra spaces trimmed. ##########################################################
+                    
+            if (tasks.length > 0) {
+
+//################# ===>>>  What it does: This checks if there are any tasks in the tasks array. If the array has one or more items, it means there are tasks to display.  ##############################################################
+
+                alert("Tasks:\n" + tasks.join("\n"));
+//################ ===>>>  "Tasks:\n": This is the message shown at the top of the alert. The \n adds a new line after the word "Tasks:".
+//################ ===>>>  tasks.join("\n"): This combines all the task texts into one string, with each task separated by a new line (\n).
+            } else {
+                alert("No tasks available.");
+            }
+        }
+        
+        /*       ===>>> function displayTasks(): ===>>>                                                                                             ===>>> Defines the displayTasks function to show all tasks in an alert box.
+                 ===>>> const tasks = Array.from(listcontainer.getElementsByTagName("li")).map(li => li.textContent.replace("\u00d7", "").trim());: ===>>> Creates an array of task texts, removing the × symbol and trimming spaces.
+                 ===>>> if (tasks.length > 0) { alert("Tasks:\n" + tasks.join("\n")); }:                                                            ===>>> If there are tasks, displays them in an alert box, each task on a new line.
+                 ===>>> else { alert("No tasks available."); }:                                                                                     ===>>> If no tasks are found, shows a different alert.*/
+
+
+
+        listcontainer.addEventListener("click", function(e) {
+            if (e.target.tagName === "LI") {
+                e.target.classList.toggle("checked");
+            } else if (e.target.tagName === "SPAN") {
+                e.target.parentElement.remove();
+            }
+        }, false);
+
+        /*  ====>>> listcontainer.addEventListener("click", function(e) { ... }, false);:        ====>>> Adds a click event listener to the listcontainer.
+            ====>>> if (e.target.tagName === "LI") { e.target.classList.toggle("checked"); }:    ====>>> If a list item (<li>) is clicked, toggles the checked class (used to mark tasks as complete).
+            ====>>> else if (e.target.tagName === "SPAN") { e.target.parentElement.remove(); }:  ====>>> If the × symbol (<span>) is clicked, removes the corresponding list item. */
+    </script>
+</body>
+</html>

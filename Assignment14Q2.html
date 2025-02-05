@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewpor+t" content="width=device-width, initial-scale=1.0">
+    <title>Assignment14Q2</title>
+</head>
+<body>
+    <ul id="List"></ul>
+
+    <script>
+       
+        let students = [
+            { name: "Alice", age: 22 },
+            { name: "Bob", age: 23 },
+            { name: "Charlie", age: 24 }
+        ];
+
+        let List = document.getElementById("List");
+
+        let listItems = "";
+
+        for (let i = 0; i < students.length; i++) {
+            listItems += "<li>" + students[i].name + "</li>";
+        }
+
+        List.innerHTML = listItems;
+    </script>
+</body>
+</html>

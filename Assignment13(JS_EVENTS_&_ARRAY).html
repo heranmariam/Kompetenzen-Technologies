@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 13 JS _Events & Array</title>
+</head>
+<body>
+   <!-- <button id = myButton onclick="handleClicked()">Click Me</button>
+    <a href="https://www.google.com/" id="myLink">Google.com</a>
+    <script> 
+        
+//################################ Event Handler ########################## 
+  /*      const buton = document.getElementById("myButton")
+       
+        function handleClicked()
+        {
+            alert(" 1st Button Clicked")
+        }
+
+        function handleClicked()
+        {
+            alert("2nd Button clicked")   // overwrite aaiitt 2nd function ollathe nadaku//
+        } */
+
+
+//################################ Event Listener ##############################
+
+
+       /* const buton = document.getElementById("myButton")
+
+        buton.addEventListener("click", function(){
+            alert(" 1st Button Clicked")
+        })
+
+        buton.addEventListener("click", function(){ // overwrite aavullaa 
+            alert(" 2nd Button Clicked")
+        })*/
+
+
+
+
+
+//############################### Removing Event Listeners ###############################
+
+
+    /*    function handleClick() 
+        {
+            alert('Button clicked!');
+        }
+        const buton = document.getElementById('myButton');
+
+        // Attach the event handler to the button's click event
+        buton.addEventListener('click', handleClick);
+
+        // Later, to remove the event listener
+        buton.removeEventListener('click', handleClick); */
+
+
+
+
+// ##################################### Using Event Object #######################################
+    
+
+ /*       const buton = document.getElementById('myButton');
+        
+        buton.addEventListener('click', function(event)
+        {
+        console.log('HAII:', event.type);
+        console.log('BYE:', event.target);  // Handleckhecked yenn fn uncomment cheyumbha work aavuu
+        }); */
+        
+        
+
+
+// #####################################   Preventing Default Behaviour   #################################
+
+
+  /*      const inbox=document.getElementById("myLink");
+        inbox.addEventListener("click", (event)=>{
+            event.preventDefault();
+        })*/
+        
+
+</script>
+        
+ // ##########################################    ARRAY     ###########################################   -->
+
+<script>
+    const arr=["orkam","fud","aprana B" ,1,2,3];
+    /*console.log(arr[0]);
+    console.log(arr.length); 
+    arr.push("hello"); // endil add aakan mendii
+    arr.pop(); //delete aakan
+    arr.unshift("haii"); // front il add aakan
+    arr.shift(); // front inu delete aakan
+    console.log(arr);
+   const arr2=[4,5,6].concat(arr)
+   console.log(arr2)*/
+
+// #############################################  slice  ##########################################
+   const arr3= arr.slice(1,3);
+   console.log(arr3);
+   
+
+//#############################################   splice   ################################################### 
+
+   arr.splice(3,0, "hi",4,62,83); // 1 - aanel koode add aavum  0- aanel 0th positionil ollath remove aakum
+    console.log(arr);
+
+  
+
+
+
+</script>
+
+
+
+    
+</body>
+</html>

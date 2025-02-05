@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment14</title>
+</head>
+<body>
+    <!-- <script>
+
+        let ArrObj=[
+        {name: "Sredha", age: 23},
+        {name: "Aparna", age: 24},
+        {name: "Minnu", age: 26}];
+
+        for (let i=0 ; i< ArrObj.length; i++){
+            const element = ArrObj[i]
+            console.log(element.name + "," + element.age)
+        }
+
+
+    </script> -->
+
+     
+
+
+    <!-- <script> //#############################################################  Sorting And custom Sorting  ###############################################################################//
+  /*      let arr=[1, 4, 6,3,7]
+        arr.sort()
+        console.log(arr)                       //..................  Asending order  .................
+        let arr1=[11, 40, 6,45,7]
+        arr1.sort(function(a,b){return b-a})
+        console.log(arr1) */                   //.................. Desending Order  ...................
+
+//  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    Object    >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+  /*      let ArrObj=[
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 26}];
+        ArrObj.sort((a, b) => a.age - b.age);   //..................  Asending  .........................
+        console.log("Sorted by age:", ArrObj); */
+
+
+       /* let ArrObj=[
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 26}];
+        ArrObj.sort((a, b) => b.age - a.age);    // ................... Desending ..........................
+        console.log("Sorted by age", ArrObj);*/
+    </script> -->
+
+
+    <!-- <script>    // ################################################################## Advanced fn of Sorting ####################################################################################
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>    Map   >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+        const num = [ 1,2,3,4];  //  .............................. normal map fn ................................................
+        const maa= num.map((num)=> num*3)
+        console.log(maa)  
+
+
+   /*    let ArrObj=[                // .............................. map using Object ...............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 26}];
+
+        const maa= ArrObj.map(element => "Hello " + element.name);
+        console.log(maa) */
+
+        
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Reduce  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+       /* const num = [ 1,2,3,4];       // ...............................   normal reduce  .......................................................
+
+        sum= num.reduce((accumulator,current_Value)=> accumulator + current_Value,0);
+        console.log(sum) */
+
+
+
+       /* let ArrObj=[                // .............................. reduce using Object ...............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 26}];
+
+        sum= ArrObj.reduce((accumulator,current_Value)=> accumulator + current_Value.age,0);
+        console.log(sum)*/
+
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Filter >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+ /*       const num = [ 1,2,3,4,20];  // ................................ filter Normal  ................................................
+        let filt =num.filter(num => num <18); 
+        console.log(filt) */
+
+
+
+
+       /* let ArrObj=[                // .............................. filter using Object ...............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 16}];
+
+        let filt =ArrObj.filter(element => element.age <18);
+        console.log(filt) */
+
+// >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   Spread Operators  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+     /*   const num=[1,2,3]    // .......................  Normal spread Operators   ..........................................
+        const num1=[4,5,6]
+        const nw=[...num,...num1]
+        console.log(nw) */ 
+
+
+
+      /*  let ArrObj=[     // .............................. spread using Object   ..............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 16}];
+        const nw =["jk",...ArrObj]
+        console.log(nw); */
+    </script> -->
+
+    <script>
+    
+//################################################# push ,Pop ############################################################################
+
+
+       /* let ArrObj=[     // ..............................   push   ..............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 16}];
+        ArrObj.push({name: "akhil", age: 25})
+        console.log(ArrObj) */
+
+       /* let ArrObj=[     // ..............................   pop   ..............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 24}];
+        let to_pop = ArrObj.pop()
+        console.log(ArrObj) */
+
+
+
+//################################################# Shift , Unshift  ##############################################################################
+
+
+        /*let ArrObj=[     // ..............................   shift   ..............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 16}];
+        let shifted = ArrObj.shift()
+        console.log(ArrObj) */
+
+
+      /*  let ArrObj=[     // ..............................   unshift   ..............................................
+        {name: "Sredha", age: 24},
+        {name: "Aparna", age: 23},
+        {name: "Minnu", age: 16}];
+        let shifted = ArrObj.unshift({name: "akhil", age: 25})
+        console.log(ArrObj) */
+
+
+
+//######################################################   slice    ########################################################################################
+
+
+          /*  let ArrObj=[     // ..............................   slice    ..............................................
+            {name: "Sredha", age: 24},
+            {name: "Aparna", age: 23},
+            {name: "Minnu", age: 16}];
+            let sliced = ArrObj.slice (1,2);
+            console.log(ArrObj)
+            console.log(sliced)*/
+
+
+//######################################################   splice    ########################################################################################
+
+
+            let ArrObj=[     // ..............................   splice    ..............................................
+            {name: "Sredha", age: 24},
+            {name: "Aparna", age: 23},
+            {name: "Minnu", age: 16}];
+            let spli = ArrObj.splice (1,2);
+            console.log(ArrObj)
+            console.log(spli)
+        
+        
+    </script>
+</body>
+</html>

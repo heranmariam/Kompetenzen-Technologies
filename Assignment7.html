@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment7Q1</title>
+
+    <style>
+        .header {
+            background: #303030;
+            color: #fff;
+            padding: 20px 0;
+        }
+
+        .nav a{
+            color: #fff;
+            padding: 6px 8px;
+            margin: 0px 1px;
+        }
+
+        .nav{
+            float:right;
+        }
+
+        h1,h2,p{
+            text-align: center;
+        }
+
+        h3{
+            padding: 15px;
+            margin: 0px;
+        }
+
+        button{
+            background: #007bff; 
+            color: #fff;
+            padding: 6px;
+            border-radius: 5px;
+        }
+
+        .service{
+            text-align: center;
+        }
+
+        .items{ 
+    
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+
+        .coffee,.bakery,.ambiance{  
+            background: #f4f4f4;
+            padding: 15px;
+            margin: 15px;
+            width: 25%;
+            text-align: center;
+
+        }
+
+
+        .gallery{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        .customers{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+
+        }
+
+
+    .john,.jane,.michael{
+        background: #f4f4f4;
+        padding: 15px;
+        margin: 15px;
+        width: 25%;
+        text-align: center;
+
+    }
+
+    .contact{
+        background: #f4f4f4;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction:column;
+        padding: 10px;
+        margin: 30px;
+        width: 100%;
+       
+    }
+
+    .contact_us{
+        text-align: center;
+    }
+
+    .contact input, .contact textarea {
+        padding: 10px;
+        margin: 10px;
+        width: 80%;
+    }
+
+    .message{
+        padding: 10px;
+        color: #fff;
+
+    }
+
+    .footer{
+        background: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+
+    </style>
+
+</head>
+<body>
+    <header
+    class="header">
+
+    <nav
+    class="nav">
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">Gallery</a>
+    <a href="#">Testimonials</a>
+    <a href="#">Contact</a>
+    </nav>
+
+        <h3>Coffee Shop</h3>
+        <h1>Welcome to Our Coffee Shop</h1>
+        <p>Enjoy the best coffee in town</p>
+
+        <div
+        class="service">
+        <button>Explore Our Services</button>   
+        </div>
+    </header>
+
+
+    <section>
+
+        <h2>Our Services</h2>
+        <div class="items">
+            <div class="coffee"><b>Fresh Coffee</b>  <br><br>We serve freshly brewed coffee made from the finest beans.</div>
+            <div class="bakery"><b>Bakery Items</b><br> <br> Enjoy Our delicious pastries and bakery items</div>
+            <div class="ambiance"><b>Cozy Ambiance</b><br><br>Relax in our cozy and comfortable atmosphere.</div>
+        
+        </div>
+
+    </section>
+
+
+    <section>
+        <h2>Gallery</h2>
+        <div class="gallery">
+
+            <div class="img1"><img src="coffee1.jpg" width="400px" alt="try again later"> </div>
+            <div class="img2"><img src="coffee2.png" width="400px" height="266" alt="image not found"> </div> 
+            <div class="img3"><img src="coffee3.jpg" width="400px" alt="image not found"></div>
+            
+        </div>
+    </section>
+
+    <section>
+        <h2>What Our Customers Say</h2>
+        <div class="customers">
+            <div class="john">"The best coffee I've ever had! Highly recommend this place." <i>-john Doe</i></div>
+            <div class="jane">"Amazing pastries and a wonderful atmosphere." - <i> -Jane Smith</i></div>
+            <div class="michael">"A great place to relax and enjoy a cup of coffee." <i>-Michael Brown</i></div>
+        </div>
+
+    </section>
+    
+
+    <section class="contact">
+        <h2 class="contact_us"> Contact Us</h2>
+        <div>
+        <form>
+            <tr>
+                <td>
+                    <input type="text" name="name" placeholder="Name" maxlength=50 ><br><br>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="email" name="email" placeholder="Email" maxlength=50 ><br><br>
+                </td>
+            </tr>
+
+            <tr>
+                <td>
+                    <textarea name="message" placeholder="Message" maxlength="100" rows="5" cols="20"></textarea></textarea>
+                </td>
+            </tr>
+
+        </form>
+
+
+        </div>
+                <div class="message">
+                    <button>Send Message</button>   
+                </div>  
+
+    </section>
+
+
+    <footer class="footer">
+        <p>© 2024 Coffee Shop. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

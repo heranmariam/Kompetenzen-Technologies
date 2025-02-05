@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Calculator</title>
+    <style>
+        body {
+            background-color: #202122;
+            text-align: center;
+            padding-top: 100px;
+            color: rgb(255, 252, 246);
+            font-size: smaller;
+        
+        }
+        button {
+            margin: 20px;
+            padding: 15px 30px;
+            font-size: 15px;
+            border: 0;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;     
+        }
+
+    </style>
+</head>
+
+<body>
+    <label for="no1">No1</label>
+    <input 
+    type="number" id="no1"
+    placeholder="Enter the First Number"><br><br><br><br>
+
+    <label for="no2">No2</label>
+    <input 
+    type="number" id="no2"
+    placeholder="Enter the Second Number"><br><br><br><br>
+
+    <button id= "addButton"onclick="mini_Calculator('add')">Add</button>
+    <button id= "subButton"onclick="mini_Calculator('subtract')">Subtract</button>
+    <button id= "multiButton"onclick="mini_Calculator('multiply')">Multiply</button>
+    <button id= "divButton"onclick="mini_Calculator('divide')">Divide</button><br><br>
+
+    <h1 id="Result"></h1>
+
+    <script>
+
+        function button_Colors() {
+            document.getElementById("addButton").style.backgroundColor = "green";
+            document.getElementById("subButton").style.backgroundColor = "green";
+            document.getElementById("multiButton").style.backgroundColor = "green";
+            document.getElementById("divButton").style.backgroundColor = "green";
+        }
+
+
+        function mini_Calculator(operation){
+            let First_Num = parseInt(document.getElementById("no1").value);
+            let second_num = parseInt(document.getElementById("no2").value);
+           
+
+            if (operation === 'add') {
+                result = First_Num + second_num;
+            } else if (operation === 'subtract') {
+                result = First_Num - second_num;
+            } else if (operation === 'multiply') {
+                result = First_Num * second_num;
+            } else if (operation === 'divide') {
+                    result = First_Num / second_num;
+            } else {
+                result = 'Invalid operation';
+            }
+
+            let resultElement = document.getElementById("Result");
+            resultElement.style.color = "red";
+            resultElement.innerHTML = "Result: " + result;
+           // document.getElementById(("no1")).value="";//
+           // document.getElementById(("no2")).value="";//
+
+
+        }
+        window.onload = button_Colors;
+        
+    </script>
+</body>
+</html>
